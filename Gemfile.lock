@@ -29,10 +29,17 @@ GEM
       i18n (= 0.6.1)
       multi_json (~> 1.0)
     arel (3.0.2)
+    awesome_print (1.0.2)
     bcrypt-ruby (3.0.1)
+    better_errors (0.8.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.1)
+      debug_inspector (>= 0.0.1)
     bootstrap-sass (2.1.0.0)
     bootstrap-will_paginate (0.0.6)
       will_paginate
+    boson (1.2.4)
     builder (3.0.4)
     capybara (1.1.2)
       mime-types (>= 1.16)
@@ -43,6 +50,7 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
+    clipboard (1.0.4)
     coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -61,8 +69,10 @@ GEM
       cucumber (>= 1.1.3)
       nokogiri (>= 1.5.0)
     database_cleaner (0.7.0)
+    debug_inspector (0.0.2)
     diff-lcs (1.1.3)
     erubis (2.7.0)
+    every_day_irb (1.4.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.1.0)
@@ -72,8 +82,12 @@ GEM
       railties (>= 3.0.0)
     faker (1.0.1)
       i18n (~> 0.4)
+    fancy_irb (0.7.3)
+      paint (>= 0.8.1)
+      unicode-display_width (>= 0.1.1)
     ffi (1.7.0)
     formatador (0.2.4)
+    g (1.7.2)
     gherkin (2.12.0)
       multi_json (~> 1.3)
     guard (1.8.0)
@@ -90,7 +104,27 @@ GEM
       spork (>= 0.8.4)
       sys-proctable
     hike (1.2.2)
+    hirb (0.7.1)
     i18n (0.6.1)
+    interactive_editor (0.0.10)
+      spoon (>= 0.0.1)
+    irbtools (1.4.0)
+      awesome_print (~> 1.0.2)
+      boson (~> 1.2.4)
+      clipboard (~> 1.0.1)
+      coderay (~> 1.0.8)
+      every_day_irb (>= 1.4.0)
+      fancy_irb (>= 0.7.3)
+      g (>= 1.7.1)
+      hirb (~> 0.7.0)
+      interactive_editor (>= 0.0.10)
+      method_locator (>= 0.0.4)
+      method_source (>= 0.8.1)
+      methodfinder (>= 1.2.5)
+      ori (~> 0.1.0)
+      paint (>= 0.8.5)
+      wirb (>= 0.4.3)
+      zucker (>= 12.1)
     journey (1.0.4)
     jquery-rails (2.0.2)
       railties (>= 3.2.0, < 5.0)
@@ -105,10 +139,17 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta_request (0.2.3)
+      rack-contrib
+      railties
+    method_locator (0.0.4)
     method_source (0.8.1)
+    methodfinder (1.2.5)
     mime-types (1.23)
     multi_json (1.7.2)
     nokogiri (1.5.9)
+    ori (0.1.0)
+    paint (0.8.6)
     pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12.1)
@@ -118,6 +159,8 @@ GEM
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-ssl (1.3.3)
       rack
     rack-test (0.6.2)
@@ -170,6 +213,8 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     slop (3.4.4)
+    spoon (0.0.3)
+      ffi
     spork (0.9.2)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -187,16 +232,22 @@ GEM
     uglifier (1.2.3)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    unicode-display_width (0.1.1)
     websocket (1.0.7)
     will_paginate (3.0.3)
+    wirb (1.0.1)
+      paint
     xpath (0.1.4)
       nokogiri (~> 1.3)
+    zucker (12.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bcrypt-ruby (= 3.0.1)
+  better_errors
+  binding_of_caller
   bootstrap-sass (= 2.1)
   bootstrap-will_paginate (= 0.0.6)
   capybara (= 1.1.2)
@@ -207,7 +258,9 @@ DEPENDENCIES
   faker (= 1.0.1)
   guard-rspec (= 1.2.1)
   guard-spork (= 1.2.0)
+  irbtools
   jquery-rails (= 2.0.2)
+  meta_request
   pg
   rails
   rspec-rails (= 2.11.0)
